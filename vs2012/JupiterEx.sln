@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JupiterEngine", "Engine\JupiterEngine.vcxproj", "{D9A04CE2-D44F-4701-8DAA-798DFCF3D204}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{243472B7-4809-41EF-B218-F6045F967912}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "Game\HelloWorld.vcxproj", "{8192F192-FE12-41BD-A7C3-C84FDB02A279}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D9A04CE2-D44F-4701-8DAA-798DFCF3D204} = {D9A04CE2-D44F-4701-8DAA-798DFCF3D204}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{8C88AF10-66A8-4278-A73F-2F9482A9B7D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9A04CE2-D44F-4701-8DAA-798DFCF3D204}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D9A04CE2-D44F-4701-8DAA-798DFCF3D204}.Debug|Win32.Build.0 = Debug|Win32
+		{D9A04CE2-D44F-4701-8DAA-798DFCF3D204}.Release|Win32.ActiveCfg = Release|Win32
+		{D9A04CE2-D44F-4701-8DAA-798DFCF3D204}.Release|Win32.Build.0 = Release|Win32
+		{8192F192-FE12-41BD-A7C3-C84FDB02A279}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8192F192-FE12-41BD-A7C3-C84FDB02A279}.Debug|Win32.Build.0 = Debug|Win32
+		{8192F192-FE12-41BD-A7C3-C84FDB02A279}.Release|Win32.ActiveCfg = Release|Win32
+		{8192F192-FE12-41BD-A7C3-C84FDB02A279}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D9A04CE2-D44F-4701-8DAA-798DFCF3D204} = {243472B7-4809-41EF-B218-F6045F967912}
+		{8192F192-FE12-41BD-A7C3-C84FDB02A279} = {8C88AF10-66A8-4278-A73F-2F9482A9B7D9}
+	EndGlobalSection
+EndGlobal
