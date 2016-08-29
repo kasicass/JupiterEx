@@ -11,10 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\JupiterEngine\Common\BaseHash.hpp" />
     <ClInclude Include="..\..\src\JupiterEngine\Common\BaseList.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\JupiterEngine\Common\BaseList.cpp" />
+    <ClCompile Include="..\..\src\JupiterEngine\Common\BaseHash.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D9A04CE2-D44F-4701-8DAA-798DFCF3D204}</ProjectGuid>

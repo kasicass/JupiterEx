@@ -9,9 +9,12 @@
     <ClInclude Include="..\..\src\JupiterEngine\Common\BaseList.hpp">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\JupiterEngine\Common\BaseHash.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\JupiterEngine\Common\BaseList.cpp">
+    <ClCompile Include="..\..\src\JupiterEngine\Common\BaseHash.cpp">
       <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>

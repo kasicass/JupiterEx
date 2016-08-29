@@ -93,7 +93,7 @@ void BaseList<T>::Delete(T* item)
 	if (item->prev_ != nullptr) item->prev_->next_ = item->next_;
 	else first_ = item->next_;
 
-	if (item->next_ != nullptr) item->next_->prev_ = item->perv_;
+	if (item->next_ != nullptr) item->next_->prev_ = item->prev_;
 	else last_ = item->prev_;
 
 	// item->next_ = nullptr;

@@ -1,0 +1,23 @@
+bin/
+obj/
+*.suo
+Build
+Lib
+*.opensdf
+*.sdf
+*.user
+ipch
+*.exe
+*.aps
+*.obj
+*.swp
+*.dll
+*.pdb
+
+# java
+*.class
+
+dist/
+target/
+
+node_modules/
