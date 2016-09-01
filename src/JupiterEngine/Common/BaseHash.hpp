@@ -2,7 +2,7 @@
 
 #include "Common/BaseList.hpp"
 
-namespace Jupiter { namespace Common {
+namespace JupiterEx { namespace Common {
 
 class BaseHashItem;
 

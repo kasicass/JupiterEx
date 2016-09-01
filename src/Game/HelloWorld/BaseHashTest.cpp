@@ -1,7 +1,7 @@
 #include "Common/BaseHash.hpp"
 #include <stdio.h>
 
-using namespace Jupiter::Common;
+using namespace JupiterEx::Common;
 
 unsigned int g_hash = 0;
 const int kBinNum = 3;

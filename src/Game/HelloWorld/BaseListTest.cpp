@@ -1,7 +1,7 @@
 #include <Common/BaseList.hpp>
 #include <stdio.h>
 
-using namespace Jupiter::Common;
+using namespace JupiterEx::Common;
 
 class MyItem : public BaseListItem<MyItem>
 {

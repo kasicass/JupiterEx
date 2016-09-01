@@ -1,6 +1,6 @@
 #include "BaseHash.hpp"
 
-namespace Jupiter { namespace Common {
+namespace JupiterEx { namespace Common {
 
 BaseHashItem* BaseHashItem::Next()
 {

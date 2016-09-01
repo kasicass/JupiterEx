@@ -4,6 +4,12 @@
     <Filter Include="Common">
       <UniqueIdentifier>{4535810e-efdd-4712-a975-89af5412b5bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RezMgr">
+      <UniqueIdentifier>{6cea5e36-6268-4411-b517-da3a1277d8b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{b8866462-cecc-41db-acfc-305dd7b1c416}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\JupiterEngine\Common\BaseList.hpp">
@@ -12,10 +18,34 @@
     <ClInclude Include="..\..\src\JupiterEngine\Common\BaseHash.hpp">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezHash.hpp">
+      <Filter>RezMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezMgr.hpp">
+      <Filter>RezMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezFile.hpp">
+      <Filter>RezMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\JupiterEngine\Memory\Memory.hpp">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\JupiterEngine\Common\SafeString.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\JupiterEngine\Common\BaseHash.cpp">
       <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\JupiterEngine\RezMgr\RezHash.cpp">
+      <Filter>RezMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\JupiterEngine\RezMgr\RezMgr.cpp">
+      <Filter>RezMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\JupiterEngine\RezMgr\RezFile.cpp">
+      <Filter>RezMgr</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

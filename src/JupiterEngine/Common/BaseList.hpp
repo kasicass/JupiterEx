@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Jupiter { namespace Common {
+namespace JupiterEx { namespace Common {
 
 template <class T>
 class BaseList;
