@@ -1,9 +1,10 @@
 
 extern void BaseListTest();
 extern void BaseHashTest();
+extern void RezFileTest();
 
 int main()
 {
-	BaseHashTest();
+	RezFileTest();
 	return 0;
 }

@@ -14,6 +14,7 @@
     <ClInclude Include="..\..\src\JupiterEngine\Common\BaseHash.hpp" />
     <ClInclude Include="..\..\src\JupiterEngine\Common\BaseList.hpp" />
     <ClInclude Include="..\..\src\JupiterEngine\Common\SafeString.hpp" />
+    <ClInclude Include="..\..\src\JupiterEngine\JupiterEx.hpp" />
     <ClInclude Include="..\..\src\JupiterEngine\Memory\Memory.hpp" />
     <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezFile.hpp" />
     <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezHash.hpp" />

@@ -6,8 +6,6 @@
 #include <assert.h>
 #include <string.h>
 
-#define SEEKPOS_ERROR 0xFFFFFFFF
-
 namespace JupiterEx { namespace RezMgr {
 
 //------------------------------------------------------------------------------------------
@@ -31,7 +29,7 @@ RezFile::RezFile(RezMgr* rezMgr) : BaseRezFile(rezMgr)
 {
 	file_ = nullptr;
 	filename_ = nullptr;
-	lastSeekPos_ = SEEKPOS_ERROR;
+	lastSeekPos_ = REZ_SEEKPOS_ERROR;
 }
 
 RezFile::~RezFile()
@@ -55,7 +53,7 @@ unsigned long RezFile::Read(unsigned long itemPos, unsigned long itemOffset, uns
 		{
 			if (!rezMgr_->DiskError())
 			{
-				lastSeekPos_ = SEEKPOS_ERROR;
+				lastSeekPos_ = REZ_SEEKPOS_ERROR;
 				assert(false && "seek failed!");
 				return 0;
 			}
@@ -67,7 +65,7 @@ unsigned long RezFile::Read(unsigned long itemPos, unsigned long itemOffset, uns
 	{
 		if (!rezMgr_->DiskError())
 		{
-			lastSeekPos_ = SEEKPOS_ERROR;
+			lastSeekPos_ = REZ_SEEKPOS_ERROR;
 			assert(false && "fread() failed!");
 			return 0;
 		}
@@ -84,7 +82,7 @@ unsigned long RezFile::Write(unsigned long itemPos, unsigned long itemOffset, un
 	assert(readOnly_ != true);
 	assert(rezMgr_ != nullptr);
 
-	lastSeekPos_ = SEEKPOS_ERROR;
+	lastSeekPos_ = REZ_SEEKPOS_ERROR;
 
 	if (size <= 0) return 0;
 
@@ -146,7 +144,7 @@ bool RezFile::Open(const char* filename, bool readOnly, bool createNew)
 		LTStrCpy(filename_, filename, length);
 	}
 
-	lastSeekPos_ = SEEKPOS_ERROR;
+	lastSeekPos_ = REZ_SEEKPOS_ERROR;
 	return true;
 }
 
@@ -182,7 +180,7 @@ bool RezFile::Close()
 		LT_MEM_TRACK_FREE(delete [] filename_);
 		filename_ = nullptr;
 	}
-	lastSeekPos_ = SEEKPOS_ERROR;
+	lastSeekPos_ = REZ_SEEKPOS_ERROR;
 	return ret;
 }
 
@@ -191,7 +189,7 @@ bool RezFile::Flush()
 	assert(file_ != nullptr);
 	assert(rezMgr_ != nullptr);
 
-	lastSeekPos_ = SEEKPOS_ERROR;
+	lastSeekPos_ = REZ_SEEKPOS_ERROR;
 
 	if (file_ == nullptr)
 	{
@@ -218,7 +216,7 @@ bool RezFile::Flush()
 
 bool RezFile::VerifyFileOpen()
 {
-	lastSeekPos_ = SEEKPOS_ERROR;
+	lastSeekPos_ = REZ_SEEKPOS_ERROR;
 
 	if (file_ == nullptr)
 		return false;

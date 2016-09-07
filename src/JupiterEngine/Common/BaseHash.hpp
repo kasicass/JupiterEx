@@ -11,7 +11,7 @@ class BaseHashTable
 public:
 	BaseHashTable();
 	BaseHashTable(unsigned int numBins);
-	~BaseHashTable();
+	virtual ~BaseHashTable();
 
 	void Insert(BaseHashItem *item);
 	void Delete(BaseHashItem *item);

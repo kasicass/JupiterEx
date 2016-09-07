@@ -33,6 +33,7 @@
     <ClInclude Include="..\..\src\JupiterEngine\Common\SafeString.hpp">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\JupiterEngine\JupiterEx.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\JupiterEngine\Common\BaseHash.cpp">

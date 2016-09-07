@@ -4,5 +4,6 @@
     <ClCompile Include="..\..\src\Game\HelloWorld\HelloWorld.cpp" />
     <ClCompile Include="..\..\src\Game\HelloWorld\BaseListTest.cpp" />
     <ClCompile Include="..\..\src\Game\HelloWorld\BaseHashTest.cpp" />
+    <ClCompile Include="..\..\src\Game\HelloWorld\RezFileTest.cpp" />
   </ItemGroup>
 </Project>
