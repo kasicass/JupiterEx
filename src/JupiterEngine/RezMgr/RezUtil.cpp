@@ -171,7 +171,7 @@ static void ViewDir(RezDir* pDir, const char* sParamPath)
 	assert(pDir != nullptr);
 	assert(sParamPath != nullptr);
 
-	zprintf("\nDirectory %s :\n", pDir->GetDirName());
+	zprintf("\nDirectory %s:\n", pDir->GetDirName());
 
 	g_DirCount++;
 

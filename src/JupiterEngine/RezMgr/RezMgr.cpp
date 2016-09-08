@@ -921,7 +921,7 @@ bool RezDir::ReadDirBlock(BaseRezFile* rezFile, unsigned long pos, unsigned long
 			size = (*(unsigned long*)curr); curr += sizeof(unsigned long);
 			time = (*(unsigned long*)curr); curr += sizeof(unsigned long);
 
-			dirName = (char*)buf;
+			dirName = (char*)curr;
 			curr += strlen(dirName)+1;
 
 			// make sure this dir doesn't already exist if it does we don't need to add it again
