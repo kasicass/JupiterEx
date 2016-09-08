@@ -441,15 +441,6 @@ void RezItem::MarkCurTime()
 //------------------------------------------------------------------------------------------
 // RezType
 
-RezType::RezType(unsigned long typeId, RezDir* parentDir, unsigned int nByIDNumHashBins, unsigned int nByNameNumHashBins) :
-	hashTableByID_(nByIDNumHashBins),
-	hashTableByName_(nByNameNumHashBins)
-{
-	typeId_ = typeId;
-	hashElementType_.SetRezType(this);
-	parentDir_ = parentDir;
-}
-
 RezType::RezType(unsigned long typeId, RezDir* parentDir, unsigned int nByNameNumHashBins) :
 	hashTableByName_(nByNameNumHashBins)
 {
@@ -460,22 +451,6 @@ RezType::RezType(unsigned long typeId, RezDir* parentDir, unsigned int nByNameNu
 
 RezType::~RezType()
 {
-	// remove all of the items in the ByID hash table
-	// Don't delete objects here, they are deleted in the ByName table below!
-
-	// no use ??? - kasicass
-	if (parentDir_->rezMgr_->itemByIDUsed_)
-	{
-		RezItemHashByID* item = hashTableByID_.GetFirst();
-		RezItemHashByID* toDel = nullptr;
-		while (item != nullptr)
-		{
-			toDel = item;
-			item = item->Next();
-			hashTableByID_.Delete(toDel);
-		}
-	}
-
 	// remove all of the items in the ByName hash table and delete the objects
 	{
 		RezItemHashByName* item = hashTableByName_.GetFirst();
@@ -1035,14 +1010,7 @@ RezType* RezDir::GetOrMakeType(unsigned long rezTypeId)
 	RezType* rezType = hashTableTypes_.Find(rezTypeId);
 	if (rezType == nullptr)
 	{
-		if (rezMgr_->itemByIDUsed_)
-		{
-			LT_MEM_TRACK_ALLOC(rezType = new RezType(rezTypeId, this, rezMgr_->byIDNumHashBins_, rezMgr_->byNameNumHashBins_), LT_MEM_TYPE_MISC);
-		}
-		else
-		{
-			LT_MEM_TRACK_ALLOC(rezType = new RezType(rezTypeId, this, rezMgr_->byNameNumHashBins_), LT_MEM_TYPE_MISC);
-		}
+		LT_MEM_TRACK_ALLOC(rezType = new RezType(rezTypeId, this, rezMgr_->byNameNumHashBins_), LT_MEM_TYPE_MISC);
 		assert(rezType != nullptr);
 		if (rezType == nullptr) return nullptr;
 
@@ -1078,7 +1046,6 @@ RezMgr::RezMgr()
 	maxOpenFilesInEmulatedDir_ = 3;
 	dirSeparators_ = nullptr;
 	lowerCaseUsed_ = false;
-	itemByIDUsed_ = false;
 	byNameNumHashBins_ = kDefaultByNameNumHashBins;
 	byIDNumHashBins_   = kDefaultByIDNumHashBins;
 	dirNumHashBins_    = kDefaultDirNumHashBins;

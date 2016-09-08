@@ -86,8 +86,7 @@ public:
 	unsigned long GetType() { return typeId_; }
 
 private:
-	RezType(unsigned long typeId, RezDir* parentDir, unsigned int nByIDNumHashBins, unsigned int nByNameNumHashBins);
-	RezType(unsigned long typeId, RezDir* parentDir, unsigned int nByNameNumHashBins); // non ID hash table version
+	RezType(unsigned long typeId, RezDir* parentDir, unsigned int nByNameNumHashBins);
 	~RezType();
 
 	friend class RezItem;
@@ -96,7 +95,6 @@ private:
 
 	unsigned long          typeId_;
 	RezTypeHash            hashElementType_;
-	RezItemHashTableByID   hashTableByID_;
 	RezItemHashTableByName hashTableByName_;
 	RezDir*                parentDir_;
 };
@@ -210,10 +208,6 @@ public:
 	bool GetLowerCasedUsed() { return lowerCaseUsed_; }
 	bool SetLowerCaseUsed(bool lowerCaseUsed) { lowerCaseUsed_ = lowerCaseUsed; }
 
-	// support for accessing resources by ID (should call set right after constructor but before open)
-	bool GetItemByIDUsed() { return itemByIDUsed_; }
-	void SetItemByIDUsed(bool itemByIDUsed) { itemByIDUsed_ = itemByIDUsed; }
-
 	// set the number of bin values for creating hash tables (should call set right after constructor but before open)
 	void SetHashTableBins(unsigned int nByNameNumHashBins, unsigned int nByIDNumHashBins,
 						  unsigned int nDirNumHashBins, unsigned int nTypeNumHashBins);
@@ -278,7 +272,6 @@ private:
 	unsigned long largestCommentSize_;   // Size of the largest comment in the resource file (including 0 terminator)
 	char *        filename_;             // Original file name user passed in to open the file
 	bool          lowerCaseUsed_;        // If TRUE then lower case may be present in file and directory names (DEFAULT IS FALSE)
-	bool          itemByIDUsed_;         // If TRUE then Rez items can be accessed by their ID, if false then they can not be (DEFAULT IS FALSE)
 	unsigned int  byNameNumHashBins_;    // number of hash bins in the ItemByName hash table
 	unsigned int  byIDNumHashBins_;      // number of hash bins in the ItemByID hash table
 	unsigned int  dirNumHashBins_;       // number of hash bins in the Directory hash table

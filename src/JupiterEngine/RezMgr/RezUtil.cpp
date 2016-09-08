@@ -702,7 +702,6 @@ int RezCompiler(const char* sCmd, const char* sRezFile, const char* sTargetDir, 
 			}
 
 			ZMgrRezMgr Mgr;
-			Mgr.SetItemByIDUsed(true);
 			Mgr.Open(sRezFile);
 			g_Mgr = &Mgr;
 
@@ -724,7 +723,6 @@ int RezCompiler(const char* sCmd, const char* sRezFile, const char* sTargetDir, 
 	case 'V': // view
 		{
 			ZMgrRezMgr Mgr;
-			Mgr.SetItemByIDUsed(true);
 			Mgr.Open(sRezFile);
 			g_Mgr = &Mgr;
 
@@ -754,7 +752,6 @@ int RezCompiler(const char* sCmd, const char* sRezFile, const char* sTargetDir, 
 			}
 
 			ZMgrRezMgr Mgr;
-			Mgr.SetItemByIDUsed(true);
 			if (!Mgr.Open(sRezFile, false, true))
 			{
 				return  0;
@@ -793,7 +790,6 @@ int RezCompiler(const char* sCmd, const char* sRezFile, const char* sTargetDir, 
 			}
 
 			ZMgrRezMgr Mgr;
-			Mgr.SetItemByIDUsed(true);
 			Mgr.Open(sRezFile, false);
 			g_Mgr = &Mgr;
 
@@ -818,7 +814,6 @@ int RezCompiler(const char* sCmd, const char* sRezFile, const char* sTargetDir, 
 			if (g_IsLithRez) break;
 
 			ZMgrRezMgr Mgr;
-			Mgr.SetItemByIDUsed(true);
 			Mgr.Open(sRezFile);
 
 			if (!CheckLithHeader(g_Mgr)) break;
@@ -833,7 +828,6 @@ int RezCompiler(const char* sCmd, const char* sRezFile, const char* sTargetDir, 
 			if (g_IsLithRez) break;
 
 			ZMgrRezMgr Mgr;
-			Mgr.SetItemByIDUsed(true);
 			if (!Mgr.Open(sRezFile))
 			{
 				zprintf("\nFailed to open file %s\n", sRezFile);
