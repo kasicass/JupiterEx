@@ -34,6 +34,9 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\JupiterEngine\JupiterEx.hpp" />
+    <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezUtil.hpp">
+      <Filter>RezMgr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\JupiterEngine\Common\BaseHash.cpp">
@@ -46,6 +49,9 @@
       <Filter>RezMgr</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\JupiterEngine\RezMgr\RezFile.cpp">
+      <Filter>RezMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\JupiterEngine\RezMgr\RezUtil.cpp">
       <Filter>RezMgr</Filter>
     </ClCompile>
   </ItemGroup>

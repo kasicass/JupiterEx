@@ -19,12 +19,14 @@
     <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezFile.hpp" />
     <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezHash.hpp" />
     <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezMgr.hpp" />
+    <ClInclude Include="..\..\src\JupiterEngine\RezMgr\RezUtil.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\JupiterEngine\Common\BaseHash.cpp" />
     <ClCompile Include="..\..\src\JupiterEngine\RezMgr\RezFile.cpp" />
     <ClCompile Include="..\..\src\JupiterEngine\RezMgr\RezHash.cpp" />
     <ClCompile Include="..\..\src\JupiterEngine\RezMgr\RezMgr.cpp" />
+    <ClCompile Include="..\..\src\JupiterEngine\RezMgr\RezUtil.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D9A04CE2-D44F-4701-8DAA-798DFCF3D204}</ProjectGuid>
