@@ -12,6 +12,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "Game\HelloWor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{8C88AF10-66A8-4278-A73F-2F9482A9B7D9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{3D8D4039-AA7A-45C9-9795-D6D3EDBB9944}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LithRez", "Tools\LithRez.vcxproj", "{D2689605-7FF9-4EFB-A42B-5E11C0CFAEE9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D9A04CE2-D44F-4701-8DAA-798DFCF3D204} = {D9A04CE2-D44F-4701-8DAA-798DFCF3D204}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -26,6 +33,10 @@ Global
 		{8192F192-FE12-41BD-A7C3-C84FDB02A279}.Debug|Win32.Build.0 = Debug|Win32
 		{8192F192-FE12-41BD-A7C3-C84FDB02A279}.Release|Win32.ActiveCfg = Release|Win32
 		{8192F192-FE12-41BD-A7C3-C84FDB02A279}.Release|Win32.Build.0 = Release|Win32
+		{D2689605-7FF9-4EFB-A42B-5E11C0CFAEE9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D2689605-7FF9-4EFB-A42B-5E11C0CFAEE9}.Debug|Win32.Build.0 = Debug|Win32
+		{D2689605-7FF9-4EFB-A42B-5E11C0CFAEE9}.Release|Win32.ActiveCfg = Release|Win32
+		{D2689605-7FF9-4EFB-A42B-5E11C0CFAEE9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,5 +44,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D9A04CE2-D44F-4701-8DAA-798DFCF3D204} = {243472B7-4809-41EF-B218-F6045F967912}
 		{8192F192-FE12-41BD-A7C3-C84FDB02A279} = {8C88AF10-66A8-4278-A73F-2F9482A9B7D9}
+		{D2689605-7FF9-4EFB-A42B-5E11C0CFAEE9} = {3D8D4039-AA7A-45C9-9795-D6D3EDBB9944}
 	EndGlobalSection
 EndGlobal

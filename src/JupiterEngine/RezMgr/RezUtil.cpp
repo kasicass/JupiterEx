@@ -663,7 +663,7 @@ bool IsCommandSet(char cFlag, const char* pszCommand)
 	return false;
 }
 
-int RezCompilter(const char* sCmd, const char* sRezFile, const char* sTargetDir, bool bLithRez, const char* sFilespec)
+int RezCompiler(const char* sCmd, const char* sRezFile, const char* sTargetDir, bool bLithRez, const char* sFilespec)
 {
 	assert(sCmd != nullptr);
 	assert(sRezFile != nullptr);
@@ -840,7 +840,7 @@ int RezCompilter(const char* sCmd, const char* sRezFile, const char* sTargetDir,
 				break;
 			}
 
-			zprintf("\n Rez Fiel %s\n", sRezFile);
+			zprintf("Rez File %s\n", sRezFile);
 			if (Mgr.IsSorted()) zprintf("Is Sorted = TRUE\n");
 			else zprintf("Is Sorted = FALSE\n");
 			zprintf("\n");

@@ -1546,7 +1546,7 @@ void RezMgr::TypeToStr(unsigned long rezTypeId, char* sType)
 {
 	assert(sType != nullptr);
 	if (sType == nullptr) return;
-	unsigned char* pType = (unsigned char*)rezTypeId;
+	unsigned char* pType = (unsigned char*)&rezTypeId;
 	int length = 0;
 
 	if (pType[3] != '\0') length = 4;
